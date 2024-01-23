@@ -39,7 +39,9 @@
 
 .ui.menu.fixed {
   height: 60px;
-  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ui.grid.container {
@@ -90,4 +92,117 @@
   color: #fff;
   font-size: 18px;
   margin-left: 0;
+}
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 24px;
+  padding: 18px 12px;
+  height: 24px;
+  background-color: transparent;
+  border: 2px solid lightgray;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: 0px;
+  right: -4px;
+  background-color: orangered;
+  color: whitesmoke;
+  border-radius: 50%;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  width: 100%;
+  margin: 8px;
+  gap:10px;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.cartItem:hover {
+  background-color: #f5f5f5;
+}
+
+.cart-actions{
+  flex:1;
+}
+.cart-single-item-price,.cart-item-quantity,.cart-item-total{
+  flex:2;
+}
+
+.cart-item-quantity{
+  text-align: center;
+}
+
+.cart-single-item-price,.cart-item-total{
+  text-align: right;
+}
+
+.cartItemTitle {
+  margin-bottom: 8px;
+  width: 50%; 
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.cart-actions {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0 8px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-actions:hover {
+  background-color: #2980b9;
+}
+
+.cart-actions:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.cart-actions + p {
+  margin: 0 8px;
+}
+
+.cartItemTitle strong {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 16px;
+  text-align: right;
 }
